@@ -1,0 +1,281 @@
+
+:root {
+    --fundo: #080808;
+    --fundo-card: #141414;
+    --verde: #00c853;
+    --verde-escuro: #087f23;
+    --verde-claro: #69f0ae;
+    --texto: #f5f5f5;
+    --texto-secundario: #bdbdbd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--verde-claro);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--verde);
+}
+
+header {
+    background-color: #050505;
+    padding: 18px 8%;
+    border-bottom: 1px solid #245c38;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+nav h2 {
+    color: var(--verde);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--texto);
+}
+
+nav a:hover {
+    color: var(--verde);
+}
+
+#menu {
+    display: none;
+    background-color: var(--verde-escuro);
+}
+
+section {
+    padding: 60px 8%;
+}
+
+#inicio {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.intro {
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--verde);
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: var(--verde);
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: var(--verde-claro);
+    margin-bottom: 10px;
+}
+
+p {
+    color: var(--texto-secundario);
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    background-color: var(--fundo-card);
+    border: 3px solid var(--verde);
+    border-radius: 50%;
+}
+
+#sobre {
+    background-color: #0d0d0d;
+}
+
+#habilidades {
+    text-align: center;
+}
+
+.lista-habilidades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.habilidade {
+    background-color: var(--fundo-card);
+    border: 1px solid #245c38;
+    padding: 20px;
+    width: 200px;
+    border-radius: 8px;
+}
+
+.habilidade:hover {
+    border-color: var(--verde);
+}
+
+#contato {
+    background-color: #0d0d0d;
+}
+
+form {
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    color: var(--texto);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #101010;
+    color: white;
+    border: 1px solid var(--verde-escuro);
+    border-radius: 5px;
+    font: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--verde);
+    border-color: var(--verde);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    background-color: var(--verde-escuro);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--verde);
+    color: #000;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--verde-claro);
+    outline-offset: 4px;
+}
+
+footer {
+    background-color: #050505;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #245c38;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+.erro {
+    color: #ff7070;
+    font-size: 0.9rem;
+}
+
+.sucesso {
+    color: var(--verde-claro);
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        padding: 15px 0;
+    }
+
+    nav ul.aberto {
+        display: flex;
+    }
+
+    #inicio {
+        min-height: auto;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .avatar {
+        width: 160px;
+        height: 160px;
+        font-size: 65px;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+
+    .habilidade {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto;
+    }
+}

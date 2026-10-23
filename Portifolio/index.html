@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Gustavo Lucas</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h2>Gustavo<span>.</span></h2>
+
+            <button id="menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+            <ul id="links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+            <button id="tema" aria-label="Ativar modo claro">☀️</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="inicio">
+            <div>
+                <p id="saudacao"></p>
+                <h1>Eu sou <span>Gustavo Lucas</span></h1>
+                <h3>Estudante de tecnologia</h3>
+                <p>Estou aprendendo a criar sites usando HTML e CSS.</p>
+                <a href="#sobre" class="botao">Saiba mais</a>
+            </div>
+
+            <div class="avatar" aria-label="Computador" role="img">🏆</div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre mim</h2>
+            <p>
+                Tenho 16 anos, torço para o Flamengo, sou católico.
+                Não gosto muito de jogar bola, mas acompanho o futebol
+                e sou fã do Neymar. Também gosto de jogar jogos online.
+            
+            </p>
+        </section>
+
+        <section id="habilidades">
+            <h2>Minhas habilidades</h2>
+
+            <div class="habilidades">
+                <div class="card">
+                    <h3>HTML</h3>
+                    <p>Para criar a estrutura dos sites.</p>
+                </div>
+
+                <div class="card">
+                    <h3>CSS</h3>
+                    <p>Para estilizar os sites e organizar o visual.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Figma</h3>
+                    <p>Para criar sites com mais tranquilidade</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+
+            <form id="formulario" novalidate>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required maxlength="80">
+                <small id="erro-nome"></small>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required maxlength="120">
+                <small id="erro-email"></small>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" required maxlength="1000"></textarea>
+                <small id="erro-mensagem"></small>
+
+                <label class="aceite">
+                    <input type="checkbox" id="consentimento">
+                    Concordo com o uso dos meus dados para responder à mensagem.
+                </label>
+                <small id="erro-consentimento"></small>
+
+                <button class="botao" type="submit">Enviar</button>
+                <p id="resultado" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="ano"></span> Gustavo Lucas</p>
+        <a href="#inicio">Voltar ao topo ↑</a>
+    </footer>
+
+</body>
+</html>
